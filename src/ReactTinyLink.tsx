@@ -43,15 +43,10 @@ export const ReactTinyLink: React.FC<IReactTinyLinkProps> = ({
   return (
     <>
       {
+      
         <Card
-          onClick={e => {
-            if (!onClick) return
-            e.preventDefault()
-            onClick(e, data)
-          }}
           className="react_tinylink_card"
           cardSize={cardSize}
-          href={url}
           width={width}
           isShownGraphic={showGraphic}
         >
@@ -82,6 +77,7 @@ export const ReactTinyLink: React.FC<IReactTinyLinkProps> = ({
             </Footer>
           </ContentWrapper>
         </Card>
+        
       }
     </>
   )

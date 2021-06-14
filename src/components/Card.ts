@@ -115,7 +115,7 @@ export const Footer = styled('footer')`
   flex-grow: 0;
 `
 
-export const Card = styled('a')`
+export const Card = styled('div')`
   max-width: ${({ width }) => (width ? width : `100vw`)};
   background-color: rgb(255, 255, 255);
   color: rgb(24, 25, 25);

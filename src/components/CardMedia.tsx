@@ -11,16 +11,16 @@ const ImageWrapper = ({ data, secureImageUrl, loadSecureUrl }) => {
     return null
   }
 
-  return <img
-    style={{ display: `none` }}
+  return <a href={imageUrl}><img
     src={imageUrl}
+    style={{width: "100%"}}
     onError={(e: any) => {
       e.target.parentElement.style.filter = ''
     }}
     onLoad={(e: any) => {
       e.target.parentElement.style.filter = ''
     }}
-  />
+  /></a>
 
 }
 
@@ -60,10 +60,9 @@ const CardMedia = ({ data, cardSize, autoPlay, loadSecureUrl }) => {
           className="react_tinylink_card_media"
           cardSize={cardSize}
           src={data.image && (secureImageUrl ? secureImageUrl : data.image[0])}
-          type={data.type}
-          style={{ WebkitFilter: 'blur(10px)', filter: 'blur(10px)' }}
         >
-          <ImageWrapper data={data} secureImageUrl={secureImageUrl} loadSecureUrl={loadSecureUrl} />
+            <ImageWrapper data={data} secureImageUrl={secureImageUrl} loadSecureUrl={loadSecureUrl} />      
+          
         </Media>
       )}
       {data.type && data.type === ReactTinyLinkType.TYPE_VIDEO && (
