@@ -11,7 +11,7 @@ const ImageWrapper = ({ data, secureImageUrl, loadSecureUrl }) => {
     return null
   }
 
-  return <a href={imageUrl}><img
+  return <a href={imageUrl} target='_blank'><img
     src={imageUrl}
     style={{width: "100%"}}
     onError={(e: any) => {

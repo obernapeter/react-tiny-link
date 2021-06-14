@@ -53,7 +53,7 @@ export const ReactTinyLink: React.FC<IReactTinyLinkProps> = ({
           {showGraphic && (
             <CardMedia autoPlay={autoPlay} cardSize={cardSize} data={data} loadSecureUrl={loadSecureUrl} />
           )}
-          <ContentWrapper className="react_tinylink_card_content_wrapper" cardSize={cardSize}>
+          <ContentWrapper className="react_tinylink_card_content_wrapper" href={url} target='_blank' cardSize={cardSize}>
             <Header maxLine={maxLine} minLine={minLine} className="react_tinylink_card_content_header">
               <Description
                 loading={loading}

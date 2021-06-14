@@ -78,13 +78,15 @@ height: 100%;
 object-fit:cover
 `
 
-export const ContentWrapper = styled('div')`
+export const ContentWrapper = styled('a')`
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   flex: 1;
   padding: 10px 15px;
   min-width: 0;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
   box-sizing: border-box;
   ${({ cardSize }) => isLarge(cardSize) && largeContentStyle};
 `
