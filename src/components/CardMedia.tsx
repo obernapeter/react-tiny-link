@@ -13,7 +13,7 @@ const ImageWrapper = ({ data, secureImageUrl, loadSecureUrl }) => {
 
   return <a href={imageUrl} target='_blank'><img
     src={imageUrl}
-    style={{width: "100%", objectFit: "cover"}}
+    style={{width: "100%", height: "100%", position: "relative", objectFit: "cover"}}
     onError={(e: any) => {
       e.target.parentElement.style.filter = ''
     }}
