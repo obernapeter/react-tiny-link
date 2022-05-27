@@ -13,7 +13,7 @@ const ImageWrapper = ({ data, secureImageUrl, loadSecureUrl }) => {
 
   return <a href={imageUrl} target='_blank'><img
     src={imageUrl}
-    style={{width: "100%"}}
+    style={{width: "100%", objectFit: "cover"}}
     onError={(e: any) => {
       e.target.parentElement.style.filter = ''
     }}
@@ -59,7 +59,6 @@ const CardMedia = ({ data, cardSize, autoPlay, loadSecureUrl }) => {
         <Media
           className="react_tinylink_card_media"
           cardSize={cardSize}
-          src={data.image && (secureImageUrl ? secureImageUrl : data.image[0])}
         >
             <ImageWrapper data={data} secureImageUrl={secureImageUrl} loadSecureUrl={loadSecureUrl} />      
           

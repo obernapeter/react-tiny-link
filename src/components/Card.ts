@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { isLarge, media } from '../utils'
-import { ReactTinyLinkType } from '../ReactTinyLinkTypes'
 
 // Media Style
 const smallMediaStyle = css`
@@ -52,14 +51,7 @@ const largeDescriptionStyle = css`
 export const Media = styled('div')`
     display: block;
     height: auto;
-    position: relative;
-    background: ${({ src, placeholderBg, type }) =>
-      src
-        ? `url(${src}) center center / ${
-            type === ReactTinyLinkType.TYPE_AUDIO ? `contain` : `cover`
-          } no-repeat rgb(225, 232, 237)`
-        : placeholderBg};
-    
+    position: relative;   
     flex: ${({ cardSize }) => (isLarge(cardSize) ? '1 1 0%;' : '0 0 125px;')}
     overflow: hidden;
     transition: flex-basis 0.25s ease-in-out 0s;
